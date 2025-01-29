@@ -3,7 +3,7 @@ import path from 'path';
 import { defineConfig } from 'vite';
 import { VitePWA } from 'vite-plugin-pwa';
 
-const basenameProd = '';
+const basenameProd = '/yonstore/';
 
 export default defineConfig(({ command }) => {
     const isProd = command === 'build';
