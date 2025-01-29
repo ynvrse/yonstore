@@ -120,6 +120,7 @@ export default function ListProduct() {
                         itemCount={products.length}
                         itemSize={90} // Ukuran setiap item
                         width="100%" // Lebar list
+                        style={{ overflowX: 'hidden' }}
                     >
                         {renderRow}
                     </List>
