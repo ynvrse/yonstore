@@ -4,13 +4,13 @@ export const Icons = {
     logo: (props: IconProps) => (
         <svg {...props} width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect width="512" height="512" rx="60" fill="#A3E635" />
-            <g clip-path="url(#clip0_2_17)" filter="url(#filter0_d_2_17)">
+            <g clipPath="url(#clip0_2_17)" filter="url(#filter0_d_2_17)">
                 <path
                     d="M68.8172 214.71L78.4516 185.694L197.167 320.372C201.35 325.781 207.819 326.879 214.71 328.331C221.6 329.784 228.481 331.501 234.919 328.331L371.642 264.576C378.001 261.599 383.204 256.649 386.392 250.544C389.579 244.44 390.561 237.545 389.174 230.999L366.197 121.502L128.957 232.128M269.648 392.224C273.071 399.564 269.586 408.433 261.865 412.033C254.144 415.633 245.111 412.602 241.688 405.262C238.266 397.923 241.75 389.054 249.471 385.454C257.192 381.853 266.226 384.885 269.648 392.224ZM423.427 320.516C426.85 327.855 423.365 336.724 415.645 340.324C407.924 343.925 398.89 340.893 395.468 333.554C392.045 326.214 395.53 317.345 403.25 313.745C410.971 310.145 420.005 313.176 423.427 320.516Z"
                     stroke="black"
-                    stroke-width="34"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeWidth="34"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                 />
                 <rect x="247.742" y="388.129" width="16.5161" height="16.5161" fill="black" />
                 <rect x="407.398" y="316.559" width="16.5161" height="16.5161" fill="black" />
@@ -18,9 +18,9 @@ export const Icons = {
             <path
                 d="M390.882 327.57H429.419M410.151 308.301V346.839"
                 stroke="#A3E635"
-                stroke-width="6"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="6"
+                strokeLinecap="round"
+                strokeLinejoin="round"
             />
             <defs>
                 <filter
@@ -30,9 +30,9 @@ export const Icons = {
                     width="492.247"
                     height="483.405"
                     filterUnits="userSpaceOnUse"
-                    color-interpolation-filters="sRGB"
+                    colorInterpolationFilters="sRGB"
                 >
-                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feFlood floodOpacity="0" result="BackgroundImageFix" />
                     <feColorMatrix
                         in="SourceAlpha"
                         type="matrix"

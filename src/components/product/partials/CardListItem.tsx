@@ -168,7 +168,11 @@ const CardListItem: React.FC<Props> = ({ product, handleDeleteProduct }) => {
                                 <div className="flex gap-x-2">
                                     <ProductAvatar name={name} product_id={product_id} />
                                     <div className="flex flex-col gap-y-2">
-                                        <CardTitle className="line-clamp-1">{name}</CardTitle>
+                                        <NavLink to={`/master-data/products/${product_id}/details`}>
+                                            <CardTitle className="line-clamp-1 hover:text-lime-400 hover:underline">
+                                                {name}
+                                            </CardTitle>
+                                        </NavLink>
                                         <CardDescription>{formatRupiah(price)}</CardDescription>
                                     </div>
                                 </div>

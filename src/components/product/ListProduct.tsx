@@ -10,7 +10,6 @@ import { useSearchParams } from 'react-router-dom';
 import { FixedSizeList as List } from 'react-window';
 import { toast } from 'sonner';
 import EmptyData from '../EmptyData';
-import { ScrollArea } from '../ui/scroll-area';
 import CardListItem from './partials/CardListItem';
 import UpdateStockProduct from './partials/UpdateStockProduct';
 
@@ -72,7 +71,7 @@ export default function ListProduct() {
     const renderRow = ({ index, style }: { index: number; style: React.CSSProperties }) => {
         const product = products[index];
         return (
-            <div style={style} key={product.product_id} className="z-999 absolute inset-0">
+            <div style={style} key={product.product_id}>
                 <CardListItem
                     product={product}
                     handleDeleteProduct={() => handleAlertDeleteProduct(product.product_id)}
@@ -106,28 +105,26 @@ export default function ListProduct() {
                 </CardDescription>
             </CardHeader>
 
-            <ScrollArea className="h-[400px] w-full">
-                <div className="mb-5 flex-row border-b"></div>
+            <div className="mb-5 flex-row border-b"></div>
 
-                <CardContent className="flex flex-col gap-4">
-                    {products.length === 0 ? (
-                        <EmptyData
-                            icon={FileX2}
-                            name={customProductName}
-                            description={`Sepertinya Anda Belum Memiliki  ${customProductName} ${search && 'dengan nama' + search}`}
-                        />
-                    ) : (
-                        <List
-                            height={400}
-                            itemCount={products.length}
-                            itemSize={85} // Ukuran setiap item
-                            width="100%" // Lebar list
-                        >
-                            {renderRow}
-                        </List>
-                    )}
-                </CardContent>
-            </ScrollArea>
+            <CardContent className="flex flex-col gap-4">
+                {products.length === 0 ? (
+                    <EmptyData
+                        icon={FileX2}
+                        name={customProductName}
+                        description={`Sepertinya Anda Belum Memiliki  ${customProductName} ${search && 'dengan nama' + search}`}
+                    />
+                ) : (
+                    <List
+                        height={400}
+                        itemCount={products.length}
+                        itemSize={90} // Ukuran setiap item
+                        width="100%" // Lebar list
+                    >
+                        {renderRow}
+                    </List>
+                )}
+            </CardContent>
 
             {productSelected && <UpdateStockProduct product={productSelected} />}
         </>

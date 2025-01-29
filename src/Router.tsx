@@ -6,6 +6,7 @@ import NoMatch from './pages/404';
 import AddProductImage from './pages/AddProductImage';
 import Cart from './pages/Cart';
 import Dashboard from './pages/Dashboard';
+import DetailProduct from './pages/DetailProduct';
 import HistoryTransaction from './pages/HistoryTransaction';
 import Product from './pages/Product';
 import Setting from './pages/Setting';
@@ -28,6 +29,10 @@ export const router = createBrowserRouter(
                 {
                     path: 'master-data/products/:id?',
                     element: <Product />,
+                },
+                {
+                    path: 'master-data/products/:id?/details',
+                    element: <DetailProduct />,
                 },
                 {
                     path: 'master-data/products/:id?/add-images',
