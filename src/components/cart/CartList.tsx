@@ -65,7 +65,7 @@ export default function CartList() {
             <ScrollArea className="h-[300px] w-full">
                 {carts?.map((cart) => (
                     <div key={cart.product.product_id} className="w-full border-b-2 px-3">
-                        <CardHeaderCustom className="flex flex-row justify-between text-muted-foreground">
+                        <CardHeaderCustom className="text-muted-foreground flex flex-row justify-between">
                             <div className="flex gap-x-2">
                                 <ProductAvatar name={cart.product.name} />
                                 <div className="flex flex-col gap-y-2">
@@ -108,19 +108,19 @@ export default function CartList() {
                 ))}
             </ScrollArea>
 
-            <div className="mb-2 mt-4 flex w-full items-center justify-between px-4 text-muted-foreground">
+            <div className="text-muted-foreground mt-4 mb-2 flex w-full items-center justify-between px-4">
                 <p>Total Item: </p>
                 <p>{carts?.length}</p>
             </div>
 
-            <div className="flex w-full items-center justify-between border-b-2 px-4 pb-4 text-lg font-bold text-muted-foreground">
+            <div className="text-muted-foreground flex w-full items-center justify-between border-b-2 px-4 pb-4 text-lg font-bold">
                 <p>Total Harga: </p>
                 <p>{formatRupiah(totalPrice)}</p>
             </div>
 
             <CardFooter className="mt-4">
                 <Button
-                    className="flex w-full"
+                    className="text-md flex w-full"
                     type="button"
                     variant={'lime'}
                     onClick={() => createTransactions(orderId)}
